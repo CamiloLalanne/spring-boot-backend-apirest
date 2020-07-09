@@ -88,7 +88,7 @@ public class ClienteRestController {
 	
 	@Secured("ROLE_ADMIN")
 	@PostMapping("/clientes")
-	public ResponseEntity<?> create(@Valid @RequestBody Cliente cliente, BindingResult result) {
+	public ResponseEntity<Map<String, Object>> create(@Valid @RequestBody Cliente cliente, BindingResult result) {
 		
 		Cliente clienteNew = null;
 		Map<String, Object> response = new HashMap<>();
